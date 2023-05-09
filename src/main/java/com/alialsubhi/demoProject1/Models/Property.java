@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Getter
 @Entity
 @Table(name = "properties")
-public class Property { //عقار
+public class Property {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +20,7 @@ public class Property { //عقار
     String name;
     String description;
     String address;
+    Double area;
     Double price;
 
 

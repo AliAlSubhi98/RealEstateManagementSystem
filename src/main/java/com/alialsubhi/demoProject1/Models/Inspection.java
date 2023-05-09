@@ -1,4 +1,5 @@
 package com.alialsubhi.demoProject1.Models;
+
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,15 +10,14 @@ import javax.persistence.*;
 @Setter
 @Getter
 @Entity
-@Table(name = "contracts")
-public class Contract extends BaseEntity{
+@Table(name = "inspections")
+public class Inspection {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
-    Agent agent;
-    Buyer buyer;
-    Seller seller;
+    String inspectorName;
+    String status;
     Property property;
 
 

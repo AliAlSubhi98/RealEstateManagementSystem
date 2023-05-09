@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Setter
@@ -20,8 +21,10 @@ public class Listing {
     Date datePosted;
     @OneToMany
     @JoinColumn(name = "id")
-    Property property;
+    List<Property> properties;
 
+    @ManyToOne
+    @JoinColumn(name = "id")
     Agent agent;
 
 
