@@ -15,11 +15,20 @@ public class Contract extends BaseEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
-    Agent agent;
-    Buyer buyer;
-    Seller seller;
-    Property property;
+    @ManyToOne
+    @JoinColumn(name = "agent_id", referencedColumnName = "id")
+    private Agent agent;
 
+    @ManyToOne
+    @JoinColumn(name = "buyer_id", referencedColumnName = "id")
+    private Buyer buyer;
 
+    @ManyToOne
+    @JoinColumn(name = "seller_id", referencedColumnName = "id")
+    private Seller seller;
+
+    @ManyToOne
+    @JoinColumn(name = "property_id", referencedColumnName = "id")
+    private Property property;
 
 }

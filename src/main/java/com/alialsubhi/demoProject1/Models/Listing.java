@@ -20,11 +20,11 @@ public class Listing {
 
     Date datePosted;
     @OneToMany
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "property_id", referencedColumnName = "id")
     List<Property> properties;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "agent_id", referencedColumnName = "id")
     Agent agent;
 
 

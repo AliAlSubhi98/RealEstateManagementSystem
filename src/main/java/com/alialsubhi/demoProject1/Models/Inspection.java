@@ -18,8 +18,10 @@ public class Inspection {
 
     String inspectorName;
     String status;
-    Property property;
 
+    @ManyToOne
+    @JoinColumn(name = "property_id" , referencedColumnName = "id")
+    Property property;
 
 
 }
